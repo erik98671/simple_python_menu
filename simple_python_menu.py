@@ -34,7 +34,7 @@ def get_menu_item(menu_items):
 def function_1():
     return
 
-# If this program is started on it's own, run the main() function.
+# If this program starts on its own, run the main() function.
 if __name__ == "__main__":
     
     # Create list of menu items to select from
