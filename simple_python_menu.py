@@ -18,12 +18,12 @@ def main(menu_items):
 # Define the menu items
 def get_menu_item(menu_items):
      
-    print("Menu:\n")
+    print("Menu: \n")
     
     for item in menu_items: 
         print(menu_items.index(item)+1, "-", item)
 
-    print("Q - Quit\n")
+    print("Q - Quit \n")
 
     menu_selection = input("Selection: ")
     print()
@@ -34,7 +34,7 @@ def get_menu_item(menu_items):
 def function_1():
     return
 
-# If this program starts on its own, run the main() function.
+# If this program starts on its own, run the main() function
 if __name__ == "__main__":
     
     # Create list of menu items to select from
