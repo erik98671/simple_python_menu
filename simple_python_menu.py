@@ -1,44 +1,38 @@
 #!/usr/bin/env python3
 # simple_python_menu.py
-# Last Updated 202006161300
+# Last Updated 202011071200
 
-# Define the main loop
-def main(menu_items):
-    quit_flag = "N"
-    while quit_flag == "N":
-    
-        selection = get_menu_item(menu_items)
-        
-        if selection == "1":
-            function_1()
-            
-        if selection.upper() == "Q":
-            quit_flag = "Y"
+# Define the Simple_Menu class
+class Simple_Menu:    
+    def __init__(self, menu_items):
+        self.menu_items = menu_items
 
-# Define the menu items
-def get_menu_item(menu_items):
-     
-    print("Menu: \n")
-    
-    for item in menu_items: 
-        print(menu_items.index(item)+1, "-", item)
+    def get_menu_item(self):
+        print("Menu: \n")
+        for item in self.menu_items: 
+            print(self.menu_items.index(item)+1, "-", item)
+        print("Q - Quit \n")
+        menu_selection = input("Selection: ")
+        print()
+        return menu_selection
 
-    print("Q - Quit \n")
+    def main(self):
+        quit_flag = "N"
+        while quit_flag == "N":
+            selection = self.get_menu_item()
+            if selection == "1":
+                self.function_1()
+            if selection.upper() == "Q":
+                quit_flag = "Y"
 
-    menu_selection = input("Selection: ")
-    print()
-    
-    return menu_selection
+    def function_1(self):
+        print("Hello.")
 
-# Define function_1()
-def function_1():
-    return
-
-# If this program starts on its own, run the main() function
 if __name__ == "__main__":
+    menu_items = ["Function 1",
+                  "Function 2"]
     
-    # Create list of menu items to select from
-    menu_items = ["First Menu Item"]
+    menu = Simple_Menu(menu_items)
+    menu.main()
+    
 
-    # Run the main program
-    main(menu_items)
